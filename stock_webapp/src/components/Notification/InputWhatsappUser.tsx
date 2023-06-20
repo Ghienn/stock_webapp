@@ -4,7 +4,7 @@ export default function InputWhatsappUser() {
     return (
         <Form.Item
             label='WhatsApp number'
-            className='w-full mx-2'
+            className='w-full'
             rules={[
                 {
                     required: true,

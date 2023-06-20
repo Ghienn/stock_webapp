@@ -65,7 +65,7 @@ export default function TimeFrameSelection(props: props) {
         <Form.Item
             name='time_frame'
             label='Time frame'
-            className='mx-2 w-full'
+            className='w-full'
             rules={[
                 {
                     required: true,

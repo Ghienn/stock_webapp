@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import CompanyModel from '@/model/Company'
 import { Form, Select } from 'antd'
-import companiesJSON from '../data/companies.json'
+import companiesJSON from '@/data/companies.json'
 
 interface props {
     setSymbol: (symbol: string) => void
@@ -15,7 +15,7 @@ export default function StockSelection(props: props) {
         <Form.Item
             name='stock'
             label='Stock'
-            className='mx-2 w-full'
+            className='w-full'
             rules={[
                 {
                     required: true,
