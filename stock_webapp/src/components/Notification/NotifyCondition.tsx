@@ -7,20 +7,13 @@ import Indicator from '../side/Indicator'
 const { Title } = Typography
 
 type props = {
-    side: string
     indicators: IndicatorModel[]
 }
 
 export default function NotifyCondition(props: props) {
     const { indicators } = props
-    // const [color, setColor] = useState<string>()
     const [selectingIndicator, setSelectingIndicator] = useState<IndicatorModel>()
 
-    // useEffect(() => {
-    //     if (side === 'notification') {
-    //         setColor('black')
-    //     }
-    // }, [side])
 
     return (
         <div className={`rounded-lg w-full`}> 
@@ -41,7 +34,7 @@ export default function NotifyCondition(props: props) {
                                 className='w-full'
                             >
                                 <Select
-                                    className='w-full'
+                                    className='w-8/12'
                                     showSearch
                                     placeholder={`Select indicator`}
                                     optionFilterProp='children'
@@ -62,14 +55,14 @@ export default function NotifyCondition(props: props) {
                                     }))}
                                 />
                                 <Button 
-                                    className='bg-blue rounded-lg'
+                                    className='bg-cyan-700 rounded-lg w-4/12 text-xs'
                                     type='primary'
                                     icon={<PlusOutlined />}
                                     onClick={() => {
                                         if (selectingIndicator) add()
                                     }}
                                 >
-                                    Add indicator
+                                    Add
                                 </Button>
                             </Space.Compact>
                         </Form.Item>

@@ -22,8 +22,13 @@ const FormField = () => {
             <TimeFrameSelection setTimeFrame={setTimeFrame}/>
             <InputTelegramUser/>
             <InputWhatsappUser/>
-            <NotifyCondition indicators={indicators} side={''}/>
+            <NotifyCondition indicators={indicators}/>
         </div>
+        <div className='items-center flex py-4'>
+              <button className="bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg m-auto">
+                  Notify me
+              </button>
+            </div>
     </div>
   )
 }

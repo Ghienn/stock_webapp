@@ -17,6 +17,7 @@ import { useEffect, useRef, useState } from 'react'
 import FormField from "@/components/Form/FormField"
 import TopCards from "@/components/TopCards/TopCards"
 import Chart from "@/components/Chart/Chart"
+import BottomTable from "@/components/BottomTable/BottomTable"
 
 const { Title } = Typography
 
@@ -90,6 +91,10 @@ export default function Notification() {
           <Chart/>
           <FormField/>
         </div>
+        <div className="p-4 gap-4">
+          <BottomTable/>
+        </div>
+        
       </main>
     </>
   )
