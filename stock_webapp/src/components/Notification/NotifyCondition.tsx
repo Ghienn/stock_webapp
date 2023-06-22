@@ -30,11 +30,10 @@ export default function NotifyCondition(props: props) {
                                 }
                             ]}>
                             <Space.Compact
-                                size='large'
+                                size='middle'
                                 className='w-full'
                             >
                                 <Select
-                                    className='w-8/12'
                                     showSearch
                                     placeholder={`Select indicator`}
                                     optionFilterProp='children'
@@ -55,7 +54,7 @@ export default function NotifyCondition(props: props) {
                                     }))}
                                 />
                                 <Button 
-                                    className='bg-cyan-700 rounded-lg w-4/12 text-xs'
+                                    className='bg-cyan-700 rounded-lg w-2/5 text-xs flex items-center'
                                     type='primary'
                                     icon={<PlusOutlined />}
                                     onClick={() => {

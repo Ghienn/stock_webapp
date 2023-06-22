@@ -19,29 +19,20 @@ export default function InputWhatsappUser() {
                 <Form.Item
                     name='whatsapp_area_code'
                     noStyle
-                    initialValue='+84'
-                    className='items-center'
                 >
-                    <Input className='w-2/12' />
+                    <Input className='w-1/6 text-center' defaultValue="+84"/>
                 </Form.Item>
                 <Form.Item
                     name='whatsapp_number'
                     noStyle
                 >
                     <Input
-                        className='w-8/12'
+                        className='w-full'
                         maxLength={9}
                         minLength={9}
                     />
                 </Form.Item>
             </Space.Compact>
         </Form.Item>
-
-        // <div className="flex items-center py-2">
-        //     <div className="flex items-center">
-        //         <label htmlFor="" className="text-sm block font-bold">WhatsApp number:</label>
-        //         <input type="text" className="text-sm w-full p2 m2 border border-gray-300 rounded mt-1" />
-        //     </div>
-        // </div>
     )
 }
