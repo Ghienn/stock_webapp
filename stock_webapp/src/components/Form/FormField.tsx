@@ -38,7 +38,7 @@ const FormField = () => {
         {data.map(({ label, value }) => (
       <Tab key={value} value={value}
           onClick={() => setActiveTab(value)}
-            className={activeTab === value ? "z-30 flex-auto relative flex list-none flex-wrap rounded-lg bg-white p-2 shadow-none font-medium text-cyan-700" : "p-2 hover:text-cyan-700"}>
+            className={activeTab === value ? "z-30 flex-auto relative flex rounded-l  g bg-white shadow-none font-medium text-cyan-700 m-2 p-2" : "p-2 m-2 hover:text-cyan-700"}>
           {label}
       </Tab>
       ))}

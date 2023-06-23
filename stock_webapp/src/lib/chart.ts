@@ -1,3 +1,12 @@
+import * as echarts from 'echarts';
+
+var ROOT_PATH = 'https://echarts.apache.org/examples';
+type EChartsOption = echarts.EChartsOption;
+
+var chartDom = document.getElementById('main')!;
+var myChart = echarts.init(chartDom);
+var option: EChartsOption;
+
 const upColor = '#00da3c';
 const downColor = '#ec0000';
 
@@ -263,3 +272,4 @@ $.get(ROOT_PATH + '/data/asset/data/stock-DJI.json', function (rawData) {
   });
 });
 
+option && myChart.setOption(option);
