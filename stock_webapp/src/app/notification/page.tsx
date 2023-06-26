@@ -93,7 +93,6 @@ export default function Notification() {
         <div className="p-4 gap-4">
           <BottomTable/>
         </div>
-        
       </main>
     </>
   )
