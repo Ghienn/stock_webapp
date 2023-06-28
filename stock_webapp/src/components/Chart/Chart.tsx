@@ -25249,12 +25249,12 @@ option = {
     {
       left: '6%',
       right: '5%',
-      height: '100%'
+      height: '50%'
     },
     {
       left: '5%',
       right: '5%',
-      top: '90%',
+      top: '80%',
       height: '16%'
     }
   ],
@@ -25346,6 +25346,7 @@ option = {
       type: 'line',
       data: calculateMA(5),
       smooth: true,
+      showSymbol: false,
       lineStyle: {
         opacity: 0.5
       }
@@ -25355,6 +25356,7 @@ option = {
       type: 'line',
       data: calculateMA(10),
       smooth: true,
+      showSymbol: false,
       lineStyle: {
         opacity: 0.5
       }
@@ -25364,6 +25366,7 @@ option = {
       type: 'line',
       data: calculateMA(20),
       smooth: true,
+      showSymbol: false,
       lineStyle: {
         opacity: 0.5
       }
@@ -25373,6 +25376,7 @@ option = {
       type: 'line',
       data: calculateMA(30),
       smooth: true,
+      showSymbol: false,
       lineStyle: {
         opacity: 0.5
       }
@@ -25388,8 +25392,8 @@ option = {
 }
 
   return (
-    <div className='w-full md:col-span-3 relative lg:h-[100vh] h-[80vh] m-auto p-4 border rounded-lg bg-white'>
-        <ReactEchart className='h-[80vh] relative' option={option}/>
+    <div className='w-full md:col-span-3 relative lg:h-[70vh] h-full p-4 border rounded-lg bg-white'>
+        <ReactEchart option={option}/>
     </div>
   )
 }

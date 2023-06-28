@@ -20,7 +20,7 @@ const FormField = () => {
     const [symbol, setSymbol] = useState<string>()
     const [timeFrame, setTimeFrame] = useState<string>()
     const [indicators, setIndicators] = useState<IndicatorModel[]>([])
-    const [activeTab, setActiveTab] = React.useState("order");
+    const [activeTab, setActiveTab] = React.useState("notification");
     const data = [
       {
         label: "Order",
@@ -32,16 +32,21 @@ const FormField = () => {
       },
     ]
   return (
-    <div className='w-full col-span-1 relative lg:h-[100vh] h-[50vh] m-auto py-4 border rounded-lg bg-white'>
-      <Tabs id="custom-animation" value="1">
-      <TabsHeader className='bg-gray-200 font-medium mx-4 my-2 text-sm'>
+    <div className='w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto py-4 border rounded-lg bg-white'>
+      <Tabs id="custom-animation" value="notification">
+      <TabsHeader
+        className="rounded-none border-b border-blue-gray-50 bg-transparent "
+      >
         {data.map(({ label, value }) => (
-      <Tab key={value} value={value}
-          onClick={() => setActiveTab(value)}
-            className={activeTab === value ? "z-30 flex-auto relative flex rounded-l  g bg-white shadow-none font-medium text-cyan-700 m-2 p-2" : "p-2 m-2 hover:text-cyan-700"}>
-          {label}
-      </Tab>
-      ))}
+          <Tab
+            key={value}
+            value={value}
+            onClick={() => setActiveTab(value)}
+            className={activeTab === value ? "text-cyan-700 font-semibold border-b-2 border-cyan-700 p-2" : "p-2"}
+          >
+            {label}
+          </Tab>
+        ))}
       </TabsHeader>
       <TabsBody
         animate={{
@@ -66,8 +71,8 @@ const FormField = () => {
         }
       </TabPanel>
     ))}
-  </TabsBody>
-</Tabs>
+      </TabsBody>
+    </Tabs>
     </div>
   )
 }
