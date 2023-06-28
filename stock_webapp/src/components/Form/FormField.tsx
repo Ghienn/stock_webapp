@@ -32,7 +32,7 @@ const FormField = () => {
       },
     ]
   return (
-    <div className='w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto py-4 border rounded-lg bg-white'>
+    <div className='w-full col-span-1 relative lg:h-[100vh] h-[50vh] m-auto py-4 border rounded-lg bg-white'>
       <Tabs id="custom-animation" value="1">
       <TabsHeader className='bg-gray-200 font-medium mx-4 my-2 text-sm'>
         {data.map(({ label, value }) => (

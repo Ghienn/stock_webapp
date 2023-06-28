@@ -25177,8 +25177,9 @@ function calculateMA(dayCount: number) {
 }
 
 option = {
+  animation: false,
   legend: {
-    bottom: 10,
+    top: 10,
     left: 'center',
     data: ['Dow-Jones index', 'MA5', 'MA10', 'MA20', 'MA30']
   },
@@ -25194,7 +25195,7 @@ option = {
       color: '#000'
     },
     position: function (pos, params, el, elRect, size) {
-      const obj: Record<string, number> = {
+      const obj = {
         top: 10
       };
       obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 30;
@@ -25246,14 +25247,14 @@ option = {
   },
   grid: [
     {
-      left: '10%',
-      right: '8%',
-      height: '50%'
+      left: '6%',
+      right: '5%',
+      height: '100%'
     },
     {
-      left: '10%',
-      right: '8%',
-      top: '63%',
+      left: '5%',
+      right: '5%',
+      top: '90%',
       height: '16%'
     }
   ],
@@ -25307,14 +25308,14 @@ option = {
       start: 98,
       end: 100
     },
-    {
-      show: true,
-      xAxisIndex: [0, 1],
-      type: 'slider',
-      top: '85%',
-      start: 98,
-      end: 100
-    }
+    // {
+    //   show: true,
+    //   xAxisIndex: [0, 1],
+    //   type: 'slider',
+    //   top: '85%',
+    //   start: 98,
+    //   end: 100
+    // }
   ],
   series: [
     {
@@ -25328,7 +25329,7 @@ option = {
         borderColor0: undefined
       },
       tooltip: {
-        formatter: function (param: any) {
+        formatter: function (param) {
           param = param[0];
           return [
             'Date: ' + param.name + '<hr size=1 style="margin: 3px 0">',
@@ -25387,8 +25388,8 @@ option = {
 }
 
   return (
-    <div className='w-full md:col-span-3 relative lg:h-[70vh] h-[100vh] m-auto p-4 border rounded-lg bg-white'>
-      <ReactEchart className="  w-full  lg:h-[70vh] h-" option={option}/>
+    <div className='w-full md:col-span-3 relative lg:h-[100vh] h-[80vh] m-auto p-4 border rounded-lg bg-white'>
+        <ReactEchart className='h-[80vh] relative' option={option}/>
     </div>
   )
 }
