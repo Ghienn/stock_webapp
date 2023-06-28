@@ -50,9 +50,9 @@ const FormField = () => {
       </TabsHeader>
       <TabsBody
         animate={{
-        initial: { y: 250 },
-        mount: { y: 0 },
-        unmount: { y: 250 },
+        initial: { z: 250 },
+        mount: { z: 0 },
+        unmount: { y: 100 },
       }}
     >
       {data.map(({ value }) => (

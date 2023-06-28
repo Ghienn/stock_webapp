@@ -25249,13 +25249,13 @@ option = {
     {
       left: '6%',
       right: '5%',
-      height: '50%'
+      height: '65%'
     },
     {
       left: '5%',
       right: '5%',
       top: '80%',
-      height: '16%'
+      height: '18%'
     }
   ],
   xAxis: [
@@ -25392,8 +25392,8 @@ option = {
 }
 
   return (
-    <div className='w-full md:col-span-3 relative lg:h-[70vh] h-full p-4 border rounded-lg bg-white'>
-        <ReactEchart option={option}/>
+    <div className='w-full md:col-span-3 relative lg:h-[70vh] h-[100vh] p-4 border rounded-lg bg-white'>
+        <ReactEchart style={{height: '100%'}} option={option}/>
     </div>
   )
 }
